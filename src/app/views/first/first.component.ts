@@ -15,7 +15,6 @@ export class FirstComponent implements OnInit {
   ngOnInit(): void {
     this.eventsService.getEventListing().subscribe((events: Array<EventModel>) => {
       this.events = events;
-      console.log('this.events', this.events)
     });
   }
 

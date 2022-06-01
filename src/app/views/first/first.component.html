@@ -1,1 +1,11 @@
-<p>first works!</p>
+<div *ngFor="let event of events">
+  <hr>
+  <h3>{{ event.topline }}</h3>
+  <img *ngIf="event.image?.image?.fullpath" height="320"
+       [src]="['https://d-ewm-3gg.xava.cloud', event.image?.image?.fullpath].join('')"  alt=""/>
+  <h3>{{ event.headline }}</h3>
+  <p>Date: {{ event.date | date: 'dd.MM.yyyy' }}</p>
+  <p>Location: {{ event.location?.name }}</p>
+  <p>Time start: {{ event.timeStart }}</p>
+  <p>Time end: {{ event.timeEnd }}</p>
+</div>
