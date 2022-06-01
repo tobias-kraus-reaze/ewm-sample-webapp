@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FirstComponent } from './views/first/first.component';
 
 const routes: Routes = [
-  { path: 'first-component', component: FirstComponent },
+  { path: 'first', component: FirstComponent },
 ];
 
 @NgModule({
